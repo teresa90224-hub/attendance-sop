@@ -16,141 +16,46 @@
     --green-border: #97C459;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text-primary);
-    font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-    min-height: 100vh;
-  }
+  body { background: var(--bg); color: var(--text-primary); font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; min-height: 100vh; }
 
-  /* HEADER */
-  header {
-    background: #1A1917;
-    color: #fff;
-    padding: 28px 40px 24px;
-  }
-  .header-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 8px;
-  }
-  header h1 {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-  header p {
-    font-size: 13px;
-    color: #aaa;
-    margin-top: 6px;
-  }
+  header { background: #1A1917; color: #fff; padding: 28px 40px 24px; }
+  .header-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+  header h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+  header p { font-size: 13px; color: #aaa; margin-top: 6px; }
 
-  /* MAIN */
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
+  main { max-width: 1000px; margin: 0 auto; padding: 40px 24px 80px; }
 
   .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
+    font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-secondary); margin: 36px 0 16px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px;
   }
+  .freq-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 700; letter-spacing: 0; }
+  .freq-high { background: #FAECE7; color: #993C1D; }
+  .freq-mid  { background: #FAEEDA; color: #854F0B; }
+  .freq-low  { background: #F1EFE8; color: #5F5E5A; }
 
-  /* SOP GRID */
-  .sop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-    margin-bottom: 48px;
-  }
+  .sop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 8px; }
 
   .sop-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 24px;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 22px; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
     transition: box-shadow .15s, border-color .15s, transform .15s;
-    cursor: pointer;
   }
-  .sop-card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,.08);
-    border-color: var(--green-border);
-    transform: translateY(-2px);
-  }
-  .sop-card-icon {
-    font-size: 28px;
-    line-height: 1;
-  }
-  .sop-card-title {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--text-primary);
-  }
-  .sop-card-desc {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-  .sop-card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 4px;
-  }
-  .tag {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: var(--green-bg);
-    color: var(--green);
-    font-weight: 600;
-  }
-  .sop-card-arrow {
-    margin-top: auto;
-    font-size: 13px;
-    color: var(--green);
-    font-weight: 700;
-  }
+  .sop-card:not(.coming-soon):hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); border-color: var(--green-border); transform: translateY(-2px); }
+  .sop-card-icon { font-size: 26px; line-height: 1; }
+  .sop-card-title { font-size: 15px; font-weight: 800; }
+  .sop-card-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.7; }
+  .sop-card-meta { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+  .sop-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--green-bg); color: var(--green); font-weight: 600; }
+  .sop-card-arrow { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--green); font-weight: 700; }
 
-  /* COMING SOON CARD */
-  .sop-card.coming-soon {
-    opacity: .5;
-    pointer-events: none;
-    border-style: dashed;
-  }
-  .coming-badge {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: #F1EFE8;
-    color: var(--text-secondary);
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 4px;
-  }
+  .sop-card.coming-soon { opacity: .45; pointer-events: none; border-style: dashed; }
+  .coming-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #F1EFE8; color: var(--text-secondary); font-weight: 600; display: inline-block; margin-top: 4px; }
 
-  /* FOOTER */
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-secondary);
-    padding: 32px;
-    border-top: 1px solid var(--border);
-  }
+  footer { text-align: center; font-size: 12px; color: var(--text-secondary); padding: 32px; border-top: 1px solid var(--border); }
 </style>
 </head>
 <body>
@@ -162,48 +67,90 @@
 </header>
 
 <main>
-  <div class="section-label">作業 SOP</div>
+
+  <!-- 高頻 -->
+  <div class="section-label">
+    <span class="freq-badge freq-high">高頻</span> 每月 / 每次皆需執行
+  </div>
   <div class="sop-grid">
 
     <a class="sop-card" href="attendance-sop.html">
       <div class="sop-card-icon">🗓️</div>
       <div class="sop-card-title">每月考勤製作</div>
-      <div class="sop-card-desc">打卡資料匯入、請假單處理、出勤統計、考勤 Excel 製作，每月 19 號啟動、28 號截止。</div>
-      <div class="sop-card-tags">
-        <span class="tag">ECP</span>
-        <span class="tag">文中</span>
-        <span class="tag">每月作業</span>
-      </div>
+      <div class="sop-card-desc">打卡資料匯入、請假單處理、出勤統計、正職與兼職考勤 Excel 製作。</div>
+      <div class="sop-card-tags"><span class="tag">文中</span><span class="tag">ECP</span><span class="tag">Excel</span></div>
       <div class="sop-card-arrow">查看 SOP →</div>
     </a>
 
     <div class="sop-card coming-soon">
-      <div class="sop-card-icon">🧑‍💼</div>
-      <div class="sop-card-title">新人報到</div>
-      <div class="sop-card-desc">新人到職流程、系統開通、報到說明會安排。</div>
-      <div class="coming-badge">即將上線</div>
-    </div>
-
-    <div class="sop-card coming-soon">
-      <div class="sop-card-icon">🔍</div>
-      <div class="sop-card-title">招募作業</div>
-      <div class="sop-card-desc">職缺刊登、履歷篩選、面試安排、錄取通知。</div>
-      <div class="coming-badge">即將上線</div>
-    </div>
-
-    <div class="sop-card coming-soon">
       <div class="sop-card-icon">💰</div>
       <div class="sop-card-title">薪資作業</div>
-      <div class="sop-card-desc">每月薪資計算、異動處理、發薪作業流程。</div>
+      <div class="sop-card-desc">客服專案薪資計算、薪資單發送、特定專案薪資資料提供、敘薪單製作。</div>
+      <div class="sop-card-tags"><span class="tag">文中</span><span class="tag">Excel</span></div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+    <a class="sop-card" href="newcomer-report-sop.html">
+      <div class="sop-card-icon">🧑‍💼</div>
+      <div class="sop-card-title">新人報告</div>
+      <div class="sop-card-desc">新人報告安排與通知、前置作業、評分表、通過信發送。</div>
+      <div class="sop-card-tags"><span class="tag">Outlook</span><span class="tag">Excel</span><span class="tag">PPT</span></div>
+      <div class="sop-card-arrow">查看 SOP →</div>
+    </a>
+
+  </div>
+
+  <!-- 中頻 -->
+  <div class="section-label">
+    <span class="freq-badge freq-mid">中頻</span> 定期或需求驅動
+  </div>
+  <div class="sop-grid">
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">📁</div>
+      <div class="sop-card-title">人事資料建檔</div>
+      <div class="sop-card-desc">新人到職、人事異動時的資料建立與更新。</div>
+      <div class="sop-card-tags"><span class="tag">文中</span><span class="tag">Excel</span></div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+    <a class="sop-card" href="health-care-sop.html">
+      <div class="sop-card-icon">🏥</div>
+      <div class="sop-card-title">特約醫護</div>
+      <div class="sop-card-desc">護理師每月安排、醫師每半年安排、醫護資料處理、合約與四大計畫更新。</div>
+      <div class="sop-card-tags"><span class="tag">電話</span><span class="tag">Outlook</span><span class="tag">紙本</span></div>
+      <div class="sop-card-arrow">查看 SOP →</div>
+    </a>
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">🗂️</div>
+      <div class="sop-card-title">行政庶務</div>
+      <div class="sop-card-desc">畢業證書身分證提供、晉升簡報製作、ECP 簽呈審核。</div>
+      <div class="sop-card-tags"><span class="tag">Outlook</span><span class="tag">ECP</span><span class="tag">PPT</span></div>
       <div class="coming-badge">即將上線</div>
     </div>
 
   </div>
+
+  <!-- 低頻 -->
+  <div class="section-label">
+    <span class="freq-badge freq-low">低頻</span> 不定期執行
+  </div>
+  <div class="sop-grid">
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">🛡️</div>
+      <div class="sop-card-title">團險分攤與報銷</div>
+      <div class="sop-card-desc">團險費用部門歸屬表製作、提供費用給大嫂報銷。</div>
+      <div class="sop-card-tags"><span class="tag">Excel</span><span class="tag">ECP</span></div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+  </div>
+
 </main>
 
-<footer>
-  Chainsea 程曦 · 人力資源部內部使用
-</footer>
+<footer>Chainsea 程曦 · 人力資源部內部使用</footer>
 
 </body>
 </html>
