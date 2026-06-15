@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR SOP 目錄 · Chainsea 程曦</title>
+<style>
+  :root {
+    --bg: #F7F5F0;
+    --card-bg: #FFFFFF;
+    --text-primary: #1A1917;
+    --text-secondary: #5F5E5A;
+    --border: #E0DDD6;
+    --green: #3B6D11;
+    --green-bg: #EAF3DE;
+    --green-border: #97C459;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: #1A1917;
+    color: #fff;
+    padding: 28px 40px 24px;
+  }
+  .header-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  header p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 6px;
+  }
+
+  /* MAIN */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* SOP GRID */
+  .sop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .sop-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow .15s, border-color .15s, transform .15s;
+    cursor: pointer;
+  }
+  .sop-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+    border-color: var(--green-border);
+    transform: translateY(-2px);
+  }
+  .sop-card-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+  .sop-card-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+  .sop-card-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .sop-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--green-bg);
+    color: var(--green);
+    font-weight: 600;
+  }
+  .sop-card-arrow {
+    margin-top: auto;
+    font-size: 13px;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  /* COMING SOON CARD */
+  .sop-card.coming-soon {
+    opacity: .5;
+    pointer-events: none;
+    border-style: dashed;
+  }
+  .coming-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #F1EFE8;
+    color: var(--text-secondary);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 32px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">Chainsea 程曦 · 人力資源部</div>
+  <h1>📋 HR SOP 作業指引</h1>
+  <p>點選下方項目查看各作業標準流程</p>
+</header>
+
+<main>
+  <div class="section-label">作業 SOP</div>
+  <div class="sop-grid">
+
+    <a class="sop-card" href="attendance.html">
+      <div class="sop-card-icon">🗓️</div>
+      <div class="sop-card-title">每月考勤製作</div>
+      <div class="sop-card-desc">打卡資料匯入、請假單處理、出勤統計、考勤 Excel 製作，每月 19 號啟動、28 號截止。</div>
+      <div class="sop-card-tags">
+        <span class="tag">ECP</span>
+        <span class="tag">文中</span>
+        <span class="tag">每月作業</span>
+      </div>
+      <div class="sop-card-arrow">查看 SOP →</div>
+    </a>
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">🧑‍💼</div>
+      <div class="sop-card-title">新人報到</div>
+      <div class="sop-card-desc">新人到職流程、系統開通、報到說明會安排。</div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">🔍</div>
+      <div class="sop-card-title">招募作業</div>
+      <div class="sop-card-desc">職缺刊登、履歷篩選、面試安排、錄取通知。</div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+    <div class="sop-card coming-soon">
+      <div class="sop-card-icon">💰</div>
+      <div class="sop-card-title">薪資作業</div>
+      <div class="sop-card-desc">每月薪資計算、異動處理、發薪作業流程。</div>
+      <div class="coming-badge">即將上線</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  Chainsea 程曦 · 人力資源部內部使用
+</footer>
+
+</body>
+</html>
