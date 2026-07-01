@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -106,7 +106,46 @@ nav button.active { background: rgba(255,255,255,.15); color: #fff; font-weight:
   background: rgba(0,0,0,.4); border-radius: 50%;
   width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
 }
-</style>
+/* ── Notice-of-salary 補丁：phase-body 直接含 ul/li/p ── */
+.phase-body {
+  padding: 16px 20px;
+}
+.phase-body > p, .phase-body > ul, .phase-body > ol {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.phase-body > ul, .phase-body > ol {
+  padding-left: 20px;
+}
+.phase-body > ul li, .phase-body > ol li {
+  margin-bottom: 4px;
+}
+.phase-body > strong, .phase-body p > strong {
+  color: var(--text-primary);
+}
+.screenshot-wrap {
+  float: none !important;
+  max-width: 680px !important;
+  margin: 12px 0 !important;
+}
+.screenshot-wrap img.screenshot {
+  max-width: 680px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  cursor: zoom-in;
+  display: block;
+}
+.phase-card {
+  padding: 0 !important;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}</style>
 </head>
 <body>
 
