@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -67,12 +67,7 @@ body { background: var(--bg); color: var(--text-primary); font-family: 'Noto San
 .tabs-nav {
   display: flex;
   gap: 4px;
-  padding: 12px 24px 0;
-  border-bottom: 2px solid var(--border);
-  background: var(--bg);
-  position: sticky;
-  top: 88px;
-  z-index: 100;
+  margin-left: auto;
 }
 .tab-btn {
   background: none;
@@ -177,7 +172,7 @@ body { background: var(--bg); color: var(--text-primary); font-family: 'Noto San
   cursor: zoom-in;
   transition: box-shadow 0.2s;
   display: inline-block;
-  max-width: 100%;
+  max-width: 67%;
 }
 .screenshot:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
 .screenshot img { display: block; max-width: 100%; height: auto; }
@@ -292,13 +287,12 @@ body { background: var(--bg); color: var(--text-primary); font-family: 'Noto San
   <span class="badge">HRM SOP</span>
   <h1>敘薪單作業 SOP</h1>
   <span class="meta">薪資單產出作業（你所負責的薪資專案）</span>
-</header>
-
-<nav class="tabs-nav">
+  <nav class="tabs-nav">
   <button class="tab-btn active" onclick="switchTab('flowchart', this)">📊 流程圖</button>
   <button class="tab-btn" onclick="switchTab('steps', this)">📋 圖解步驟</button>
   <button class="tab-btn" onclick="switchTab('links', this)">🔗 常用連結</button>
 </nav>
+</header>
 
 <div id="tab-flowchart" class="tab-panel active">
   <div class="flowchart-container">
